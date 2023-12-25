@@ -1,0 +1,176 @@
+body{
+    height: 100vh;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    background-image: url(https://cdna.artstation.com/p/assets/images/images/005/890/404/original/david-crouch-city-street-gif.gif?1494480299);
+}
+
+.regiteration{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 0 0 25px rgb( 0 0 0 / 0.5);
+    border-radius: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    background-color: white;
+}
+.regiteration form{
+    padding: 30px;
+    width: 350px;
+}
+.regiteration form .title{
+    text-align: center;
+    font-weight: bold;
+    font-size: 32px;
+    text-transform: capitalize;
+}
+.regiteration form p{
+    text-align: center;
+}
+
+.socials{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    justify-content: center;
+    margin: 20px;
+}
+.socials p{
+    font-size: 22px;
+    margin: 0;
+    background-color: transparent;
+    border: 1px solid black;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.socials p:hover{
+    background-color: rgb(255, 60, 76);
+    color: white;
+    border-color: rgb(255, 60, 76);
+}
+
+.regiteration form input{
+    padding: 20px 10px;
+    background-color: #e5e5e5;
+    border: none;
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    height: 20px;
+    transition: 0.3s;
+}
+.regiteration form input::placeholder{
+    text-transform: capitalize;
+    transition: 0.3s;
+}
+.regiteration form input:focus{
+    outline: rgb(0, 81, 255);
+    box-shadow: 0  0 5px rgb(0, 81, 255);
+}
+.regiteration form input:focus::placeholder{
+    opacity: 0;
+}
+.regiteration form button , .layout button{
+    padding: 11px 35px;
+    color: white;
+    border: 1px solid rgb(255, 60, 76);
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: rgb(255, 60, 76);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.regiteration form button:hover{
+    background-color: transparent;
+    color: rgb(255, 60, 76);
+}
+.confirm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.layout{
+    position: absolute;
+    padding: 30px;
+    background-image: url("./pexels-宇宙无敌-daddy-16569318.jpg");
+    background-size: cover;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    width: calc(50%);
+    height: calc(100% ) ;
+    overflow: hidden; 
+    box-shadow: 0 0 10px rgb( 0 0 0 / 0.6);
+    border-radius: 15px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    z-index: 20;
+    transition: 1s;
+}
+.layout:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 60, 76 , 0.5);;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.layout .login{
+    position: absolute;
+    width: calc(100% - 60px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    transition: 1s;
+}
+.layout .signup{
+    position: absolute;
+    top: 200%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    width: calc(100% - 60px);
+    transition: 1s;
+}
+.layout  h2{
+    text-align: center;
+    font-weight: bold;
+    font-size: 32px;
+    text-transform: capitalize;
+    color: white;
+    margin-top: 0;
+}
+.layout  p{
+    text-align: center;
+    text-transform: capitalize;
+    color: white;
+}
+.layout button{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid rgb(255, 60, 76);
+    transition: 0.3s;
+}
+.layout button:hover{
+    background-color: transparent;
+    color: rgb(255, 60, 76);
+}

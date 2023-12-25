@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Image Slider</title>
+    <style>
+        .slider-container {
+            max-width: 600px;
+            overflow: hidden;
+            margin: auto;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+        }
+
+        button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="slider-container">
+    <div class="slides" id="slides-container"></div>
+</div>
+
+<button onclick="prevSlide()">Previous</button>
+<button onclick="nextSlide()">Next</button>
+
+<script>
+    const imageUrls = ["./main page images/BLACK_FRIDAY_COUPON_Mesa_de_trabajo_1.jpg" , "./main page images/1946.jpg"];
+
+    const slidesContainer = document.getElementById('slides-container');
+    let currentSlide = 0;
+
+    function createSlide(imageUrl) {
+        const slide = document.createElement('div');
+        slide.classList.add('slide');
+
+        const image = document.createElement('img');
+        image.src = imageUrl;
+        image.alt = 'Slide Image';
+        slide.appendChild(image);
+
+        return slide;
+    }
+
+    function createSlides() {
+        for (const imageUrl of imageUrls) {
+            const slide = createSlide(imageUrl);
+            slidesContainer.appendChild(slide);
+        }
+    }
+
+    function showSlide(index) {
+        if (index < 0) {
+            currentSlide = imageUrls.length - 1;
+        } else if (index >= imageUrls.length) {
+            currentSlide = 0;
+        } else {
+            currentSlide = index;
+        }
+
+        const offset = -currentSlide * 100 + '%';
+        slidesContainer.style.transform = `translateX(${offset})`;
+    }
+
+    function prevSlide() {
+        showSlide(currentSlide - 1);
+    }
+
+    function nextSlide() {
+        showSlide(currentSlide + 1);
+    }
+
+    // Initialize the slider
+    createSlides();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+<li class="prod">
+    <div class="image"><img src="../main page images/1600w-CGH2i5Uw6K8.webp" alt=""></div>
+    <div class="text">
+        <div>
+            <h2 class="name">cosmitics in the hood</h2>
+            <p class="price">199.99</p>
+        </div>
+        <div>
+            <p>count: <span class="count">1</span></p>
+            <button>+</button>
+            <button>-</button>
+        </div>
+    </div>
+</li>

@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+:root{
+    --main-color: rgb(255, 60, 76);
+    --secondary-Color: #a0a0a0;
+    --main-transition: 0.3s;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    margin: 40px 0;
+    text-transform: capitalize;
+    font-size: 32px;
+}
+.title span{
+    color: royalblue;
+    font-size: 38px;
+    display: flex;
+    align-items: center;
+}
+
+.panel .container form > div > div{
+    display: flex;
+    align-items: center;
+    padding:  5px 0;
+}
+.panel .container form > div > div i{
+    font-size: 22px;
+    color: royalblue;
+    margin-right: 10px;
+
+}
+
+
+.products .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(325px  , 1fr));
+    gap: 20px;
+}
+.products .container .warning{
+    display: flex;
+    gap: 10px;
+    font-size: 20px;
+    width: 100%;
+    text-transform: capitalize;
+}
